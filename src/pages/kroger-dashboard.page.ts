@@ -14,7 +14,9 @@ export default class KrogerDashboardPage {
   }
 
   get accountNavButton() {
-    return this.page.getByRole('button', { name: 'Vikram Reddy' });
+    // FIX: The nav button is named "Account Menu" (not the user's name "Vikram Reddy").
+    // The user's name appears only in the welcome heading on the dashboard page itself.
+    return this.page.getByRole('button', { name: 'Account Menu' });
   }
 
   // ---- Actions ----
